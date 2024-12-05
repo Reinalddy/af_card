@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Sidebar</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .col {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .col-left {
+            background-color: #ffffff;
+            padding: 20px;
+        }
+
+        .col-right {
+            background-color: #333333;
+            color: #ffffff;
+            padding: 20px;
+        }
+
+        .sidebar {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%);
+            background-color: #4CAF50;
+            width: 60px;
+            padding: 20px 0;
+            border-radius: 0 30px 30px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            margin: 20px 0;
+            font-size: 24px;
+        }
+
+        .sidebar a:hover {
+            opacity: 0.8;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        h4 {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        h5 {
+            font-size: 1rem;
+            margin: 1rem 0;
+        }
+
+        p {
+            font-size: 1rem;
+            margin: 0.5rem 0;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 50px;
+                padding: 15px 0;
+            }
+
+            .sidebar a {
+                font-size: 20px;
+                margin: 15px 0;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h4, h5, p {
+                font-size: 1rem;
+            }
+
+            img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .sidebar {
+                width: 40px;
+                padding: 10px 0;
+            }
+
+            .sidebar a {
+                font-size: 18px;
+                margin: 10px 0;
+            }
+
+            h1 {
+                font-size: 1.2rem;
+            }
+
+            h4, h5, p {
+                font-size: 0.9rem;
+            }
+
+            img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <!-- Left Column -->
+        <div class="col col-left">
+            <div>
+                <h1>DIAN TRI MEGA SARI, SKM</h1>
+                <h4>Overseas Affiliate of Oval Capital International</h4>
+                <div>
+                    <h5>For Register, Scan Here:</h5>
+                    <img src="https://dummyimage.com/300" alt="barcode" style="width: 200px; height: 200px;">
+                    <h5>Download BFX Mobile First</h5>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <a href="#"><i class="fas fa-home"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+            <a href="#"><i class="fas fa-phone"></i></a>
+            <a href="#"><i class="fas fa-globe"></i></a>
+        </div>
+
+        <!-- Right Column -->
+        <div class="col col-right">
+            <div>
+                <p>9B, Amtel Building, 148 des Voenux Road Central, Central Hongkong</p>
+                <p>trisari030384@gmail.com</p>
+                <p>0283829382838293828</p>
+                <p>https://bfx.beoverflow.com/ref/1J0X1737385</p>
+                <p><i class="fas fa-address-book"></i> Referral code: Aceh</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
